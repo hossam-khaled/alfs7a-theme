@@ -1,0 +1,36 @@
+/*------------------------------------Start  ( Section-c )--------------------------*/
+.section-c {
+  .single-post {
+    padding-top: 15px;
+    .thumbnail-block{
+      float: $float-right;
+      overflow: hidden;
+      margin-left: 10px;
+      max-width: 40%;
+    }
+    .text {
+      .the-title {
+        height: 50px;
+        @media #{$maxSmall} {
+          height: 45px;
+        }
+      }
+    }
+    .details {
+      padding: 0;
+    }
+  }
+}
+.big-and-fourth {
+  .section-c {
+    .single-post {
+      padding-top: 15px;
+      &:first-child {
+        padding-top: 0;
+        @media #{$maxSmall} {
+          padding-top: 15px;
+        }
+      }
+    }
+  }
+}

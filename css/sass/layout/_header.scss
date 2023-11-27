@@ -1,0 +1,446 @@
+/* = Header
+-------------------------------------------------------------- */
+#khy-header {
+  background: $blueColor;
+  margin-bottom: 20px !important;
+  // border-top: 2px solid #f00;
+  .container {
+    position: unset;
+  }
+  .left-block {
+    position: relative;
+    @media #{$maxMedium} {
+      display: none;
+    }
+  }
+
+  .header-center {
+    padding: 0 20px;
+    overflow: hidden;
+    @media #{$maxMedium} {
+      padding: 0;
+      position: relative;
+      height: 65px;
+    }
+    @media #{$maxMobile} {
+
+    }
+    .logo-container {
+      float: $float-right;
+      max-width: 230px;
+      padding: 25px 0;
+      @media #{$maxMedium} {
+        max-width: 120px;
+        padding: 15px 25px;
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        @include prefixer(transform, translate(50%,-50%), webkit moz ms o);
+      }
+      @media #{$maxMobile} {
+
+      }
+    }
+    .banner {
+      float: $float-left;
+      max-width: 730px;
+      overflow: hidden;
+      padding: 20px 0 20px 0;
+      margin: 0;
+      * {
+        max-width: 100%;
+      }
+    }
+    .search-icone {
+      width: 47px;
+      height: 47px;
+      // position: absolute;
+      // left: 0;
+      // top: 35px;
+      float: $float-left;
+      margin-top: 35px;
+      background: $blueColor url('images/search-open.png') no-repeat center center;
+      background-size: 30px;
+      cursor: pointer;
+      z-index: 999999;
+      &.close {
+        background-image: url('images/search-close.png');
+      }
+    }
+    .search-box {
+      float: $float-left;
+      width: 250px;
+      height: 42px;
+      margin: 40px 0;
+      display: none;
+      @media #{$maxMedium} {
+      }
+      .field {
+        height: 41px;
+        color: #000;
+        background: #fff;
+        width: 90%;
+      }
+    }
+    .today-date {
+      padding: 0;
+      margin: 50px 30px;
+      font-weight: bold;
+    }
+    .social-icons {
+      float: $float-right;
+      margin: 45px 0;
+      overflow: hidden;
+      margin-left: 15px;
+      @media #{$maxMedium} {
+        display: none;
+      }
+      a {
+        width: 29px;
+        height: 29px;
+      }
+
+    }
+  }
+  .main-menu {
+    border-bottom: 2px solid #f28c25;
+    @media #{$maxMedium} {
+      background: $blueColor !important;
+    }
+    .search-box {
+      padding: 5px 20px 7px 15px;
+      padding: 0;
+      background-color: #f28c25;
+      background: none;
+      width: 150px !important;
+      margin-bottom: 10px;
+      border-radius: 36px;
+      margin-top: 15px;
+      display: none !important;
+      .submit {
+        left: 0;
+        top: 2px;
+        background: url('images/search.png') no-repeat center;
+        background-size: 17px;
+      }
+    }
+    .nav-menu {
+      background-color: $blueColor;
+      @media #{$maxMedium} {
+        background: $blueColor !important;
+      }
+      li {
+        font: {
+          size: 17px;
+          weight: bold;
+        }
+        float: $float-right;
+        color: #fff !important;
+        @media #{$maxMedium} {
+          float: none;
+          border-bottom: 1px solid #ccc;
+          background: $blueColor !important;
+        }
+        a {
+          color: #fff !important;
+          padding: 14px 12px;
+        }
+        .sub-menu {
+          background: $blueColor;
+          top: 100%;
+          @media #{$maxMedium} {
+            top: auto;
+          }
+          li {
+            width: 200px;
+            @media #{$maxMedium} {
+              width: auto;
+              border-bottom: 1px solid #ccc;
+            }
+            &:first-child {
+              @media #{$maxMedium} {
+                border-top: 1px solid #ccc;
+              }
+            }
+            &:hover > .sub-menu {
+              display: block;
+            }
+            .sub-menu {
+              @media #{$maxMedium} {
+                position: relative;
+                top: auto;
+                right: auto;
+                display: block !important;
+              }
+            }
+            a {
+              color: #fff !important;;
+              // color: $mainColor;
+              padding: 10px;
+              @media #{$maxMedium} {
+                padding: 15px 12px;
+              }
+              @media #{$maxMedium} {
+                padding: 8px !important;
+                border-bottom: 1px solid $orangeColor !important;
+                border-top: 1px solid $blueColor !important;
+              }
+            }
+            &.active > a, > a:hover {
+              color: #fff;
+              background: $orangeColor !important;
+              // background-color: #313131;
+            }
+          }
+        }
+      }
+      > li {
+        position: relative;
+        &:hover > .sub-menu {
+          display: block;
+        }
+        > a {
+          @media #{$maxMedium} {
+            padding: 8px !important;
+            border-bottom: 1px solid $orangeColor !important;
+            border-top: 1px solid $blueColor !important;
+          }
+          color: #fff !important;
+          padding: 10px 15px 13px 15px;
+        }
+        &.active > a,
+        > a:hover,
+        &.hover > a,
+        &.current-menu-item > a {
+          color: #fff;
+          background: $orangeColor;
+          @media #{$maxMedium} {
+            background: $orangeColor !important;
+            color: #fff !important;
+          }
+        }
+      }
+
+    }
+  }
+
+  .search-navigation-icone {
+
+    top: 50%;
+    right: 15px;
+    left: auto;
+    @include prefixer(transform, translate(0,-50%), webkit moz ms o);
+    .navigation-icone{
+      background:{
+        size: 30px;
+      }
+    }
+  }
+  .prayer-block {
+    display: none;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 15px;
+    @include prefixer(transform, translate(0,-50%), webkit moz ms o);
+    @media #{ $maxMedium } {
+      display: block;
+    }
+    .prayer-icone {
+      cursor: pointer;
+      background: url('images/Mosque.svg') center center no-repeat;
+      background-size: 30px;
+      padding: 25px;
+    }
+    .search {
+      background: url("images/search-open.png") no-repeat center center;
+      background-size: 25px;
+      cursor: pointer;
+      padding: 25px;
+      &.active {
+          background-image: url('images/search-close.png');
+      }
+    }
+  }
+  #widgets {
+    .prayer {
+      display: none;
+      background-color: $blueColor;
+      .title-note{
+        display: none;
+      }
+      .single {
+        .name {
+          background-position: center 40px;
+          padding-bottom: 55px;
+          font-size: 18px;
+          font-weight: bold;
+          background-size: 30px;
+        }
+        .time {
+          font-weight: bold;
+          background: #f28f2d;
+          display: inline-block;
+          padding: 0 15px 5px 15px;
+          border-radius: 5px;
+          margin-top: 0px;
+          direction: rtl;
+        }
+      }
+    }
+    .search-box {
+      display: none;
+      width: 100%;
+      background: $blueColor;
+      .field {
+        width: 100%;
+        box-sizing: border-box;
+        background: #fff;
+        padding: 1px 10px 0px 40px;
+        color: #b2b2b2;
+        text-align: right;
+      }
+      .submit {
+        background-size: 17px;
+        background-position: center;
+      }
+    }
+
+
+  }
+}
+
+/* = Top bar
+-------------------------------------------------------------- */
+
+.topbar {
+  font-size: 13px;
+  height: 42px;
+  border-bottom: 1px solid #ddd;
+  color: #a1a1a1;
+  padding-right: 10px;
+  .search-box {
+    float: $float-left;
+    margin: 0 15px 0 0;
+    height: 42px;
+    @media #{$maxMedium} {
+      width: 190px;
+      margin: 0;
+    }
+    .field {
+      height: 41px;
+      color: #bbb;
+      background: #e1e1e1;
+    }
+  }
+  .today-date {
+    float: $float-right;
+    padding: 11px 0;
+    padding-right: 25px;
+    background: url('images/icon-date.png') no-repeat right center;
+    background-size: 19px;
+    margin-left: 20px;
+    @media #{$maxMedium} {
+      margin: 0 0 0 10px;
+    }
+    @media #{$maxMobile} {
+      display: none;
+    }
+  }
+  .social-icons {
+    padding: 8px 0 7px 15px;
+    overflow: hidden;
+    float: $float-right;
+    @media #{$maxMedium} {
+      padding-left: 0;
+    }
+    a {
+      width: 25px;
+      height: 25px;
+    }
+
+  }
+  .small-links {
+    float: $float-right;
+    margin-top: 12px;
+    li {
+      padding: 0px 15px;
+      list-style: none;
+      float: $float-right;
+      border-left: 1px solid #a6a8ad;
+      line-height: 1;
+      &:last-child {
+        border-left: 0;
+      }
+      a {
+        color: #a1a1a1;
+        display: block;
+      }
+    }
+    @media #{$maxLarge} {
+      display: none;
+    }
+  }
+  .prayer {
+    color: #a1a1a1;
+    float: $float-right;
+    padding: 12px 0;
+    padding-right: 23px;
+    padding-bottom: 7px;
+    background: url('images/sidebar-prayer.png') no-repeat right center;
+    background-size: 17px;
+    margin-left: 20px;
+    .single{
+
+      .name {
+        float: $float-right;
+        padding-left: 5px;
+        font-size: 13px;
+        color: inherit;
+        padding: 0;
+        margin-left: 5px;
+        border: 0;
+      }
+      .time {
+        font-size: 13px;
+        margin-top: 0;
+      }
+    }
+    @media #{$maxSmall} {
+      display: none;
+    }
+  }
+  .khy-weather {
+    color: #a1a1a1;
+    float: $float-right;
+    margin-top: 10px;
+    margin-left: 15px;
+    .city {
+      background: none;
+      padding: 0;
+      .icon {
+        font-size: 23px;
+        width: 25px;
+        height: 25px;
+        margin-left: 5px;
+        color: #a1a1a1;
+      }
+      .city-name {
+        color: #a1a1a1;
+        font-size: 14px;
+        line-height: 1.36;
+      }
+      .temperature {
+        font-size: 14px;
+        line-height: 1.36;
+        color: #a1a1a1;
+      }
+    }
+    @media #{$maxSmall} {
+      display: none;
+    }
+  }
+
+}

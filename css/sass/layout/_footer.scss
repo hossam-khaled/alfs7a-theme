@@ -1,0 +1,275 @@
+/* = footer
+-------------------------------------------------------------- */
+
+#khy-footer {
+  background-color: #eeeeee;
+  // border-bottom: 2px solid #f00;
+
+  .half, .third, .fourth {
+    min-height: 10px;
+  }
+
+  .logo-container {
+    max-width: 200px;
+    margin: auto;
+  }
+  .top-footer {
+    font-size: 13px;
+    color: #a1a1a1;
+    border-bottom: 1px solid #ddd;
+    .search-box {
+      float: $float-left;
+      .field {
+        background-color: #ddd;
+        color: #333;
+      }
+    }
+    .today-date {
+      float: $float-right;
+      padding: 12px 0;
+      padding-right: 25px;
+      padding-bottom: 8px;
+      background: url('images/icon-date.png') no-repeat 99% center;
+      background-size: 19px;
+      margin-left: 20px;
+      margin-right: 10px;
+      @media #{$maxMobile} {
+        display: none;
+      }
+    }
+    .prayer {
+      float: $float-right;
+      padding: 12px 0;
+      padding-right: 23px;
+      padding-bottom: 7px;
+      background: url('images/sidebar-prayer.png') no-repeat right center;
+      background-size: 17px;
+      margin-left: 20px;
+      color: #a1a1a1;
+      margin-bottom: 0;
+      .single{
+
+        .name {
+          float: $float-right;
+          font-size: 13px;
+          color: #a1a1a1;
+          padding: 0;
+          margin-left: 5px;
+          border: 0;
+        }
+        .time {
+          margin-top: 0;
+        }
+      }
+      @media #{$maxSmall} {
+        display: none;
+      }
+    }
+    .khy-weather {
+      float: $float-right;
+      @media #{$maxSmall} {
+        margin-left: 0;
+        margin-right: 10px;
+      }
+      .city {
+        background: none;
+        padding: 0;
+        .icon {
+          font-size: 23px;
+          width: 25px;
+          height: 25px;
+          margin-left: 5px;
+          color: #a1a1a1;
+        }
+        .city-name {
+          color: #a1a1a1;
+          font-size: 14px;
+          line-height: 1.36;
+
+        }
+        .temperature {
+          font-size: 14px;
+          line-height: 1.36;
+          color: #a1a1a1;
+          margin-left: 5px;
+        }
+      }
+    }
+    .social-icons {
+      padding: 5px 0 5px 15px;
+      float: $float-right;
+      a {
+        width: 25px;
+        height: 25px;
+      }
+      @media #{$maxMedium} {
+        display: none;
+      }
+    }
+
+  }
+
+  .upper-footer {
+    padding: 20px 15px;
+    @media #{$maxMobile} {
+      padding: 20px 5px;
+    }
+    .today-date {
+      float: $float-right;
+      padding-right: 20px;
+      background: url('images/icon-date.png') no-repeat right center;
+      background-size: 16px;
+      margin-bottom: 15px;
+      margin-top: 10px;
+    }
+    .social-icons {
+      float: $float-right;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      a {
+        width: 33px;
+        height: 33px;
+      }
+    }
+    .search-box {
+      float: $float-left;
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      .field {
+        background-color: #ddd;
+        color: #000;
+        width: 100%;
+      }
+    }
+  }
+
+  .third {
+    overflow: hidden;
+    float: $float-right;
+    width: 33%;
+
+    &.logo {
+      width: 26%;
+    }
+    &.search {
+      width: 25%;
+    }
+    &.last {
+      @media #{$maxSmall} {
+        width: auto;
+        float: none;
+      }
+    }
+    @media #{$maxSmall} {
+      width: auto !important;
+      float: none !important;
+      margin-bottom: 20px;
+    }
+    .today-date {
+      background: none;
+      padding-right: 0;
+      font-size: 11px;
+      font-weight: bold;
+    }
+  }
+  .half {
+    overflow: hidden;
+    width: 70%;
+    float: $float-right;
+    margin: 0;
+    @media #{$maxSmall} {
+      width: auto;
+      float: none;
+      margin-bottom: 20px;
+    }
+    &.last {
+      float: $float-left;
+      width: 26%;
+      text-align: center;
+      @media #{$maxSmall} {
+        width: auto;
+        float: none;
+      }
+    }
+
+  }
+  .nav-menu {
+    li {
+      float: $float-right;
+      font-size: 17px;
+      @media #{$maxMobile} {
+        width: 50%;
+        font-size: 15px;
+      }
+      &:last-child {
+
+      }
+      a {
+        color: $mainColor;
+        &:hover {
+          color: $orangeColor;
+
+        }
+      }
+      ul {
+
+        li {
+
+        }
+      }
+    }
+
+  }
+  .description {
+    font-size: 18px;
+    color: #4a4a4a;
+    line-height: 1.4;
+  }
+
+  .sub-footer {
+    font-size: 12px;
+    background-color: #868686;
+    .copyrights {
+      color: #c1c1c1;
+      font-size: 15px;
+      float: $float-right;
+      @media #{$maxSmall} {
+        float: none;
+        text-align: center;
+        margin-bottom: 20px;
+        line-height: 1.6;
+      }
+    }
+    .khafagy-logo {
+      padding-top: 5px;
+      padding-left: 15px;
+      float: $float-left;
+      min-width: 220px;
+      @media #{$maxSmall} {
+        float: none;
+      }
+      .name {
+        border-left: 1px solid $mainColor;
+        color: $mainColor;
+        a {
+          color: $mainColor;
+        }
+      }
+      .logo {
+        width: 134px;
+        height: 35px;
+        background: url('images/khafagy-logo.png') no-repeat top left;
+        display: block;
+        overflow: hidden;
+        margin: 0 auto;
+        float: $float-right;
+        margin-top: -8px;
+        a {
+          display: block;
+          padding-top: 200px;
+        }
+      }
+    }
+  }
+}

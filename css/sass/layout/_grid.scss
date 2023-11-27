@@ -1,0 +1,57 @@
+.container {
+  max-width: $containerWidth;
+
+}
+.content-area {
+  width: 63%;
+
+}
+
+#sidebar {
+  width: 35%
+}
+.left-block {
+  @media #{$maxMedium} {
+    // display: none;
+  }
+}
+.hidden-block {
+  display: none;
+}
+// .background-block {
+//   padding: 15px 15px 0 15px;
+//   background-color: #fff;
+//   @media #{$maxMobile} {
+//     padding: 10px 8px 0 8px;
+//   }
+// }
+// .no-background {
+//   padding: 15px 0 0 0;
+//   @media #{$maxMobile} {
+//     padding: 10px 0 0 0;
+//   }
+// }
+.margin-bottom {
+  @media #{$maxSmall} {
+    margin-bottom: 40px;
+  }
+}
+.half, .third, .fourth {
+  @media #{$maxMobile} {
+    padding: 0;
+  }
+}
+.single-block {
+  max-width: 690px;
+  margin: auto;
+}
+.third , .fourth{
+  @media #{$maxMobile} {
+    width: 100% !important;
+  }
+}
+.row-block{
+  @media #{$maxMobile} {
+    margin: 0 auto !important;
+  }
+}

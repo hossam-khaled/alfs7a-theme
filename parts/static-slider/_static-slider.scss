@@ -1,0 +1,148 @@
+/*------------------------------------Start  ( static-slider )--------------------------*/
+#khy-static-slider {
+  display: block;
+  position: relative;
+  padding-bottom: 0;
+  @media #{$maxMedium} {
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 15px;
+  }
+  .the-slider {
+    display: none;
+    max-width: 320px;
+    margin: auto;
+    background: none;
+  }
+  @media #{$maxMobile} {
+    .static-slider {
+        display: none;
+    }
+    .the-slider {
+      display: block;
+    }
+    .pagination {
+
+      display: block;
+      position: absolute;
+      bottom: 10px;
+      right: 50%;
+      text-align: center;
+      z-index: 999;
+      @include prefixer(transform, translate(50%, 0), webkit moz ms o);
+      span {
+        display: inline-block;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        margin-left: 10px;
+        background-color: #fff;
+        opacity: .5;
+        &.active {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .big-block {
+    width: 50%;
+    margin: 0 0% 0 .5%;
+    float: $float-right;
+    overflow: hidden;
+    @media #{$maxMedium} {
+      margin: 0;
+      width: 100%;
+      float: none;
+    }
+    @media #{$maxSmall} {
+      width: 100%;
+      border: 0;
+      border-bottom: 1px solid #fff;
+      float: none;
+    }
+    @media #{$maxMobile} {
+      font-size: 20px;
+
+    }
+  }
+  .small-block {
+    overflow: hidden;
+    float: $float-right;
+    width: 49.5%;
+
+    @media #{$maxMedium} {
+      width: 100%;
+      float: none;
+    }
+    .single-post {
+      float: $float-right;
+      width:49.3% ;
+      &:nth-child(odd) {
+        margin-left: 6px;
+      }
+      @media #{$maxMedium} {
+      }
+      @media #{$maxMobile} {
+        display: none;
+      }
+      .text {
+        .the-title {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .single-post {
+    margin-bottom: 6px;
+    box-sizing: border-box;
+    border: 0;
+    padding: 0;
+    &:last-child {
+      margin-left:0;
+    }
+    .thumbnail-block {
+      &::after {
+         content: "";
+         position: absolute;
+         display: block;
+         overflow: hidden;
+         bottom: 0;
+         right: 0;
+         left: 0;
+         top: 0;
+         background-image: url('images/slider.png');
+         background-size: cover;
+         z-index: 1;
+       }
+    }
+    .text {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 11111;
+      padding: 10px;
+      // background-image: url('images/slider-bg.png');
+      // background-size: 100% 100%;
+      .the-title {
+        color: #fff;
+        font-size: 30px;
+        @media #{$maxMobile} {
+          font-size: 18px;;
+        }
+      }
+      .details {
+        > * {
+          color: #fff;
+        }
+        .views,.comments {
+          @media #{$maxMobile} {
+            display: none;
+          }
+
+        }
+      }
+
+    }
+  }
+}

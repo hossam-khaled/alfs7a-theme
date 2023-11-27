@@ -1,0 +1,36 @@
+
+/*------------------------------------Start  ( section-articles )--------------------------*/
+.section-articles {
+  .single-post {
+    padding: 15px 0;
+    .thumbnail-block{
+      overflow: hidden;
+      float: $float-right;
+      margin-left: 20px;
+      border-radius: 50%;
+      width: 71px;
+    }
+    .text {
+      .the-title {
+        font-size: 16px;
+        max-height: 45px;
+        margin-bottom: 0;
+        @media #{$maxSmall} {
+
+        }
+      }
+      .title-name {
+        color: #8f8f8f;
+        font-size: 14px;
+        padding: 5px 25px 3px 0;
+        overflow: hidden;
+        background-image: url('images/icon-author.png');
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        background-size: 19px;
+      }
+    }
+
+  }
+
+}

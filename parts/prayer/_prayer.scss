@@ -1,0 +1,68 @@
+.prayer {
+  overflow: hidden;
+  background-color: #1b4961;
+  color: #fff;
+  padding: 5px 5px 10px 5px;
+  margin-bottom: 15px;
+  .title-note {
+    padding: 10px 15px;
+    color: #fff;
+    text-align: center;
+    // border-bottom: 1px solid #256072;
+  }
+  .thumbnail {
+    float: $float-right;
+    overflow: hidden;
+    margin-left: 10px;
+    background: url('images/sidebar-prayer-icon.png') no-repeat center center;
+    width: 50px;
+    height: 75px;
+    display: none;
+  }
+  .main-title {
+    font-size: 17px;
+    overflow: hidden;
+    margin-bottom: 5px;
+    display: inline;
+    line-height: 1.6em;
+  }
+  .note {
+    display: inline;
+    overflow: hidden;
+    font-size: 17px;
+    line-height: 1.6em;
+    color: #fff;
+  }
+  .single {
+    width: 33.33%;
+    float: $float-right;
+    text-align: center;
+    // background-color: #8b416f;
+    box-sizing: border-box;
+    &:nth-child(3n) {
+      margin-left: 0;
+      .name {
+        border-left: 0;
+      }
+    }
+    .name {
+      background: url('images/sidebar-prayer-icon.png') center 55px no-repeat;
+      padding: 10px;
+      padding-bottom: 70px;
+      // border-left: 1px solid #256072;
+      // border-bottom: 1px solid #256072;
+      color: #fff;
+      font-size: 14px;
+    }
+    .time {
+      font-size: 14px;
+      overflow: hidden;
+      margin-top: 10px;
+    }
+    &:last-child {
+      .name, .time {
+        border-left: 0;
+      }
+    }
+  }
+}

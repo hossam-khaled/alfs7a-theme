@@ -1,0 +1,27 @@
+/*==================Start ( Section-B )=======================*/
+
+.section-i {
+
+  .single-post {
+    margin-bottom: 15px;
+    .thumbnail-block {
+      width: 160px;
+      height: 110px;
+      overflow: hidden;
+      float: $float-right;
+      margin-left: 10px;
+      // @media #{$maxSmall} {
+      //   float: none;
+      //   max-width: 100%;
+      // }
+    }
+    .text {
+      .the-title {
+
+      }
+      .description {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

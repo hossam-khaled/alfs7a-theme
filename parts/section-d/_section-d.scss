@@ -1,0 +1,28 @@
+/*==================Start ( Section-B )=======================*/
+
+.section-d {
+  .single-post {
+    margin-bottom: 15px;
+    .thumbnail-block {
+      float: $float-right;
+      max-width: 400px;
+      @media #{$maxSmall} {
+        float: none;
+        max-width: 100%;
+      }
+    }
+    .text {
+      padding: 5px 15px 26px 5px;
+      .the-title {
+        font-size: 24px;
+        line-height: 1.4;
+        height: 67px;
+      }
+      .description {
+        font-size: 18px;
+        height: 125px;
+        line-height: 1.4;
+      }
+    }
+  }
+}

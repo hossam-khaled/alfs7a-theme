@@ -1,0 +1,9 @@
+h1, h2, h3, h4, h5, h6,
+a.button,
+.pagination ul > li,
+#header-navigation .nav-menu li,
+#world-now,
+.ui-tabs .ui-tabs-nav li,
+#single .entry-meta .tags .title {
+    font-weight : normal;
+}

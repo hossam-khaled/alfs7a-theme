@@ -1,0 +1,69 @@
+/* = archive block
+-------------------------------------------------------------- */
+#archive .category-description {
+  font-size: 18px;
+  background-color: #f5f5f5;
+  color: $mainColor;
+}
+#archive-block {
+
+}
+.section-f {
+  .single-post {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    .thumbnail-block {
+      float: $float-right;
+      max-width: 36%;
+      @media #{$maxSmall} {
+        float: none;
+        max-width: 350px;
+        margin: 15px auto;
+      }
+    }
+    a.text {
+      padding-right: 15px;
+      padding-top: 0;
+      .the-title {
+        font-size: 24px;
+        // color: $mainColor;
+        @include prefixer(transition, all 250ms ease-in-out, webkit moz ms o);
+        @media #{$maxMobile} {
+          font-size: 20px;
+        }
+      }
+      .details {
+        height: auto;
+         > *:last-child {
+           float: right;
+         }
+         > * {
+           margin-left: 10px;
+           font-size: 13px;
+         }
+
+        .auther-name {
+          background: rgba(0, 0, 0, 0.5);
+          color: #FFF;
+          border-right: 2px solid $orangeColor;
+          padding: 5px;
+          padding-right: 7px;
+        }
+      }
+    }
+    &:hover a.text h2 {
+      color: #2e4990;
+    }
+    .details.cat {
+      top: 0;
+      right: 0;
+      z-index: 9999;
+      position: absolute;
+      background-color: rgba( #000, .5);
+      color: #fff;
+    }
+
+  }
+
+}

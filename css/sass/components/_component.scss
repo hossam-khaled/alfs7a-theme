@@ -1,0 +1,195 @@
+/* = Pagination
+-------------------------------------------------------------- */
+
+.pagination ul {
+  background: #fff;
+  padding: 10px 15px;
+  margin-top: 15px;
+  > {
+    li {
+      font-size: 15px;
+
+      > a, &:last-child > a, &:first-child > a, > span, &:last-child > span, &:first-child > span {
+        color: #6c7180;
+        padding: 15px;
+      }
+      > a:hover {
+        background-color: $mainColor;
+        color: #fff;
+      }
+    }
+    .active > {
+      a, span {
+        background-color: $mainColor;
+        color: #fff;
+      }
+    }
+    li > span.current {
+      background-color: $mainColor;
+      color: #fff;
+      color: #fff;
+    }
+  }
+}
+/* = breadcrumbs
+-------------------------------------------------------------- */
+
+#breadcrumbs {
+  border-top: 3px solid #2d354a;
+  margin-bottom: 20px;
+  font-size: 12px;
+  padding: 7px 0;
+  list-style: none;
+  background-color: #fff;
+  a {
+    color: $mainColor;
+    padding-left: 5px;
+  }
+  div {
+    padding-right: 5px;
+  }
+}
+/* = Search Box
+-------------------------------------------------------------- */
+.search-box {
+  position: relative;
+  width: 210px;
+  height: 36px;
+  background: #b8b4a6;
+  .field {
+    position: absolute;
+    padding: 1px 7px 0px 25px;
+    width: 85%;
+    height: 35px;
+    background: #505050;
+    line-height: 10px;
+    font-size: 13px;
+    color: #f3f3f3;
+    font-family: $mainFont;
+  }
+  .submit {
+    position: absolute;
+    text-indent: -1000px;
+    left: 0px;
+    top: 0px;
+    width: 36px;
+    height: 100%;
+    background: url('images/search.png') no-repeat right;
+  }
+}
+/* = Form styling
+-------------------------------------------------------------- */
+
+.form {
+  margin: 20px 0;
+  .success {
+    margin-bottom: 30px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    font-size: 13px;
+  }
+  .errors {
+    margin-bottom: 30px;
+    .single-error {
+      padding: 2px 15px;
+      background: #ffecec;
+      border: 1px solid #f5aca6;
+      color: #000;
+      margin-bottom: 10px;
+      p {
+        margin: 0 !important;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .single-field {
+    margin-bottom: 15px;
+    &:last-child {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border-bottom: 0;
+    }
+    .title {
+      width: 25%;
+      margin-left: 3%;
+      float: $float-right;
+      font-size: 15px;
+    }
+    .the-field {
+      overflow: hidden;
+    }
+  }
+  input[type="text"], select, textarea {
+    font-family: 'HelveticaNeueLT' ,serif, arial;
+  }
+  input {
+    &[type="submit"] {
+      font-family: 'HelveticaNeueLT' ,serif, arial;
+    }
+    &[type="text"] {
+      width: 99%;
+      padding: 8px 6px;
+      border: 1px solid #E3E8EB;
+      border-radius: 4px;
+      box-sizing: border-box;
+      box-shadow: inset 1px 1px 0 0px #E9EAEE;
+      color: #999;
+    }
+  }
+  select {
+    width: 99%;
+    padding: 8px 6px;
+    border: 1px solid #E3E8EB;
+    border-radius: 4px;
+    box-shadow: inset 1px 1px 0 0px #E9EAEE;
+    color: #999;
+  }
+  textarea {
+    width: 99%;
+    padding: 8px 6px;
+    border: 1px solid #E3E8EB;
+    border-radius: 4px;
+    box-shadow: inset 1px 1px 0 0px #E9EAEE;
+    color: #999;
+    height: 150px;
+  }
+  select {
+    font-size: 13px;
+    line-height: 1;
+    padding: 5px 6px;
+  }
+  .recapatcha {
+    direction: ltr;
+    float: $float-right;
+  }
+  .single-field .the-field .date-row select {
+    width: 30%;
+    float: $float-right;
+    margin-left: 2%;
+    padding: 5px;
+  }
+  textarea {
+    min-height: 90px;
+  }
+  .error {
+    border-color: #ff0000;
+  }
+  label {
+    color: #333;
+  }
+  input[type="submit"] {
+    background: $mainColor;
+    color: #fff;
+    font-size: 18px;
+    border: 0;
+    padding: 3px 35px 13px 35px;
+    float: $float-left;
+  }
+  .recaptchatable #recaptcha_response_field {
+    height: auto;
+  }
+}

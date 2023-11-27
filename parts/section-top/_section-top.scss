@@ -1,0 +1,43 @@
+/*------------------------------------Start  ( section-top )--------------------------*/
+
+.section-top {
+  .single-post {
+    padding: 15px 0;
+    .thumbnail-block {
+      float: $float-right;
+      overflow: hidden;
+      width: 110px;
+      height: 80px;
+      margin-left: 10px;
+      &:before {
+        counter-increment: number-block;
+        content: counter( number-block );
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        width: 10px;
+        height: 10px;
+        line-height: 10px;
+        text-align: center;
+        color: #fff;
+        background-color: #f00;
+        padding: 3px;
+        font-size: 13px;
+        display: none;
+      }
+    }
+    .text {
+       .details {
+         margin-bottom: 5px;
+       }
+      .the-title {
+        height: 50px;
+        margin-bottom: 0;
+        @media #{ $maxMobile } {
+          height: 45px;
+        }
+      }
+    }
+  }
+
+}

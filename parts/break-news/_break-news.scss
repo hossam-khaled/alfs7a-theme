@@ -1,0 +1,68 @@
+
+/* = immediate news
+--------------------------------------------------------------------------- */
+
+.immediate-news {
+  background-color: #dd3333;
+  overflow: hidden;
+  margin-bottom: 20px;
+  position: relative;
+  // display: none;
+  .title {
+    padding: 13px 15px;
+    background-color: #fff;
+    border: 2px solid #e40d0d;
+    color: #e40d0d;
+    float: right;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1;
+    @media #{$maxMobile} {
+      display: block;
+      float: none;
+      padding: 8px 15px 13px 15px;
+      text-align: center;
+    }
+  }
+  .the-title {
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 5px 0 3px 0;
+    padding: 0 10px 5px 10px;
+    overflow: hidden;
+    @media #{$maxMobile} {
+      margin: 0;
+      padding: 5px 10px 10px 10px;
+
+    }
+  }
+  &.green {
+    background-color: #005c4a;
+    .title {
+      border: 2px solid #005c4a;
+      color: #005c4a;
+    }
+    .the-title {
+    }
+  }
+  &.blue {
+    background-color: #1676a9;
+    .title {
+      border: 2px solid #1676a9;
+      color: #1676a9;
+    }
+    .the-title {
+
+    }
+  }
+  &.gray {
+    background-color: #a0a0a0;
+    .title {
+      border: 2px solid #a0a0a0;
+      color: #a0a0a0;
+    }
+    .the-title {
+    }
+  }
+}

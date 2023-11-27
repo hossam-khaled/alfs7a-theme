@@ -1,0 +1,29 @@
+/*==================Start ( Section-B )=======================*/
+
+.section-b {
+  .single-post {
+    // padding: 15px;
+    .thumbnail-block {
+      margin-bottom: 15px;
+    }
+    .text {
+      .the-title {
+        height: 60px;
+        font-size: 21px;
+        @media #{$maxMobile} {
+          font-size: 18px;
+          height: 55px;
+        }
+      }
+      .description {
+        height: 100px;
+        line-height: 1.4;
+        // margin-bottom: 7px;
+        @media #{$maxMobile} {
+          font-size: 15px;
+          height: 90px;
+        }
+      }
+    }
+  }
+}

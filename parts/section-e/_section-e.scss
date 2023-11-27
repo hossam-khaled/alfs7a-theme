@@ -1,0 +1,30 @@
+/*==================Start ( Section-B )=======================*/
+
+.section-e {
+  .single-post {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 690px;
+    margin-bottom: 15px;
+    .thumbnail-block {
+    }
+    .text {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background-image: url('images/slider-bg.png');
+      background-size: contain;
+      text-align: center;
+      padding: 15px 10px;
+      .the-title {
+        color: #fff;
+      }
+      .details{
+        .date {
+          float: none;
+        }
+      }
+    }
+  }
+}

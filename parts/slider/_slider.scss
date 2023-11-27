@@ -1,0 +1,197 @@
+
+/* = slider section
+----------------------------------------------- */
+
+.the-slider {
+  margin-bottom: 35px;
+  background-color: #fff;
+  .swiper-button-next, .swiper-button-prev {
+    display: none;
+  }
+}
+
+.posts-slider {
+  position: relative;
+  overflow: hidden;
+
+  .main-slides {
+    overflow: hidden;
+    // border-left: 5px solid #273468;
+
+    @media #{$maxMedium} {
+      border: 0;
+    }
+    @media #{$maxMobile} {
+      height: 300px;
+    }
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+      direction: rtl;
+      position: relative;
+      padding-bottom: 0;
+    }
+    .swiper-slide {
+      font-size: 18px;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+    }
+    .swiper-button-prev, .swiper-button-next {
+      position: absolute;
+      top: 50%;
+      width: 20px;
+      height: 25px;
+      margin-top: -22px;
+      z-index: 10;
+      cursor: pointer;
+      background-size: 20px 25px;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .single-post .thumbnail-block{
+    position: relative;
+  }
+  .main-slides .single-post .thumbnail-block{
+    position: relative;
+    height: 406px;
+    @media #{$maxMobile} {
+      height: 320px;
+    }
+  }
+  .main-slides {
+    .single-post {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      display: block;
+      &::after {
+         content: "";
+         position: absolute;
+         display: block;
+         overflow: hidden;
+         bottom: 0;
+         right: 0;
+         left: 0;
+         top: 0;
+         background-image: url('images/slider.png');
+         background-size: cover;
+         z-index: 1;
+       }
+    }
+    .inner {
+      position: absolute;
+      z-index: 999;
+      padding: 10px 15px 30px 15px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      // background-image: url('images/slider-bg.png');
+      // background-position: bottom center;
+      // background-repeat: repeat-x;
+      .the-title {
+        color: #fff;
+        font-size: 30px;
+        margin-bottom: 10px;
+        overflow: hidden;
+        padding-bottom: 3px;
+        line-height: 1.4;
+        @media #{$maxMedium} {
+          font-size: 25px;
+        }
+        @media #{$maxMobile} {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .ditals {
+    overflow: hidden;
+    > * {
+      color: #fff;
+      padding-left: 10px;
+      line-height: 1;
+      border-left: 1px solid #fff;
+      position: relative;
+      font-size: 13px;
+      float: right;
+      margin-left: 10px;
+      padding-bottom: 3px;
+      margin-bottom: 5px;
+      background-repeat: no-repeat;
+      background-position: right center;
+      &:last-child {
+        border:0;
+      }
+    }
+    .category {
+
+    }
+    .comments {
+
+    }
+    .date {
+
+    }
+    .views {
+
+    }
+  }
+
+  .pagination {
+    display: block;
+    overflow: hidden;
+    width: 260px;
+    float: left;
+    @media #{$maxSmall} {
+      display: none;
+    }
+    > a.single-post {
+      display: block;
+      background-color: #f7f7f7;
+      // padding: 8px;
+      border-bottom: 2px solid #fff;
+      overflow: hidden;
+      &:last-child {
+        border-bottom: 0;
+
+      }
+      .thumbnail-block{
+        overflow: hidden;
+        position: relative;
+        float: $float-right;
+        max-width: 105px;
+      }
+      .inner {
+        overflow: hidden;
+        display: block;
+        padding: 8px 10px 5px 5px;
+        .the-title {
+          font-size: 16px;
+          color: #333;
+          overflow: hidden;
+          height: 81px;
+          line-height: 1.3;
+        }
+      }
+      &:hover, &.active,&.active .the-title, &:hover .the-title {
+        background-color: $orangeColor;
+        color: #fff;
+      }
+      .inner .data-of-post {
+        display: block;
+        overflow: hidden;
+        color: #888585;
+        font-size: 12px;
+        font-family: 'Droid Arabic Kufi', sans-serif;
+      }
+      &.active .data-of-post, &:hover .data-of-post {
+        color: #fff;
+      }
+    }
+  }
+}

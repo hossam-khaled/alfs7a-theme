@@ -1,0 +1,132 @@
+/* = Mixin
+-------------------------------------------------------------- */
+/*
+ ** Prefixes Mixin
+ ** Auto Add Prefixes To Properties
+ ** Example: @include prefixer(transition, all .3s ease-in-out, webkit moz ms o);
+*/
+@mixin prefixer( $property, $value, $prefixes : () ) {
+    @each $prefix in $prefixes {
+        #{'-' + $prefix + '-' + $property }: $value;
+    }
+    #{$property}:$value;
+}
+
+/*
+ ** Background color gradient
+ ** Example: @include gradient( $from, $to );
+*/
+@mixin gradient($from, $to) {
+  background-color: $from;
+  background-image: -moz-linear-gradient($from, $to);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to));
+  background-image: -webkit-linear-gradient($from, $to);
+  background-image: -o-linear-gradient($from, $to);
+}
+
+/*
+ ** Background color gradient
+ ** Example: @include gradient_top_to_bottom($top, $bottom);
+*/
+@mixin gradient_top_to_bottom($top, $bottom) {
+  background: $top;
+  background: -moz-linear-gradient(top, $top 0%, $bottom 100%);
+  background: -webkit-linear-gradient(top, $top 0%,$bottom 100%);
+  background: linear-gradient(to bottom, $top 0%,$bottom 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$top}', endColorstr='#{$bottom}',GradientType=0 );
+}
+/*
+ ** Background color gradient
+ ** Example: @include gradient_left_to_right($left, $right);
+*/
+@mixin gradient_left_to_right($left, $right) {
+  background: $left;
+  background: -moz-linear-gradient(left, $left 0%, $right 100%);
+  background: -webkit-linear-gradient(left, $left 0%,$right 100%);
+  background: linear-gradient(to right, $left 0%,$right 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$left}', endColorstr='#{$right}',GradientType=1 );
+}
+
+  /*
+ ** Opacity Mixin For All Browsers
+ ** Accept Argument => Property Value
+ ** Example: @include opacity(.5)
+ */
+
+ @mixin opacity($value) {
+   zoom: 1;
+   $opacity-ie: $value * 100;
+   filter: alpha(opacity = $opacity-ie);
+   opacity: $value;
+ }
+
+/*
+ ** Animation Mixin For All Browser
+ ** Accept Argument => Animation Name
+ ** Example: @include keyframes(SlideUpAndDown)
+ */
+
+ @mixin keyframes($name) {
+   @-webkit-keyframes #{$name} {
+     @content;
+   }
+   @-moz-keyframes #{$name} {
+     @content;
+   }
+   @keyframes #{$name} {
+     @content;
+   }
+ }
+
+/*
+ ** Overlay Mixin
+ ** Accept Argument => Color
+ ** Example: @include overlay(black, .5);
+ */
+
+@mixin overlay($color, $opacity) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color, $opacity);
+}
+
+/*
+ ** Center Element Horizontally and Vertically
+ ** Accept No Arguments
+ ** Example: @include centerer();
+ */
+
+@mixin centerer() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @include prefixer(transform, translate(-50%, -50%), webkit moz o);
+}
+
+/*
+ ** Circle Mixin
+ ** Accept Argument => Dimensions
+ ** Example: @include circle(100px);
+ */
+
+@mixin circle($dimension) {
+  width: $dimension;
+  height: $dimension;
+  border-radius: 50%;
+}
+
+/*
+ ** Placeholder Mixin
+ ** Accept No Arguments
+ ** Example: @include placeholder( Add Properties Here );
+ */
+
+ @mixin placeholder {
+   ::-webkit-input-placeholder {@content}
+   ::-moz-placeholder          {@content}
+   :-ms-input-placeholder      {@content}
+   :-moz-placeholder           {@content}
+ }
